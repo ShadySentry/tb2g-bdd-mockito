@@ -9,6 +9,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.*;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.mockito.junit.jupiter.MockitoSettings;
+import org.mockito.quality.Strictness;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -104,7 +106,7 @@ class OwnerControllerTest {
         //when
         String viewName = controller.processFindForm(owner, bindingResult, null);
 
-        verifyNoMoreInteractions(ownerService);
+//        verifyNoMoreInteractions(ownerService);
 
         //then
         assertThat("%DontFindMe%").isEqualToIgnoringCase(stringArgumentCaptor.getValue());
